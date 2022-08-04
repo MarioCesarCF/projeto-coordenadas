@@ -43,17 +43,24 @@ const empresas = [
 ]
 
 /*********************************************************************************/
+//     window.location.replace("http://127.0.0.1:5500/infos.html") direciona para a url;
 
-// const btnAcessar = document.getElementById('btnAcessar');
 
+const cpnjInput = document.getElementById('cnpjInput');
+let table = document.createElement('table');
+let thead = document.createElement('thead');
+let tbody = document.createElement('tbody');
 
-// btnAcessar.addEventListener('click', (e) => {
-//     const email = document.getElementById('email');
-//     const senha = document.getElementById('senha');
-//     e.preventDefault();
-//     window.location.replace("http://127.0.0.1:5500/infos.html");
-//     console.log(email.value + ' ' + senha.value)
-//     // if(login.senha === senha.value && login.email === email.value) {
-//     //     window.location.replace("http://127.0.0.1:5500/infos.html");
-//     // }
-// })
+table.appendChild(thead);
+table.appendChild(tbody);
+
+function pesquisarPorCnpj() {
+    for(let element of empresas) {
+        if(element.cnpj === cpnjInput.value) {
+            return console.log('CNPJ encontrado')
+        } else {
+            return console.log('CNPJ não encontrado')
+        }
+    }
+    return
+}
