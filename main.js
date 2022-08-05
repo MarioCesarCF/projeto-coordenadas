@@ -54,13 +54,10 @@ let tbody = document.createElement('tbody');
 table.appendChild(thead);
 table.appendChild(tbody);
 
-function pesquisarPorCnpj() {
-    for(let element of empresas) {
-        if(element.cnpj === cpnjInput.value) {
-            return console.log('CNPJ encontrado')
-        } else {
-            return console.log('CNPJ não encontrado')
-        }
-    }
-    return
+function pesquisarPorCnpj() {    
+    let cnpjEmpresa = empresas.filter((empresa) => {                
+        return empresa.cnpj === Number(cpnjInput.value);
+    })
+
+    console.log(cnpjEmpresa[0].nome);    
 }
