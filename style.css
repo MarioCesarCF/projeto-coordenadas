@@ -12,3 +12,14 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
 }
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table, th, td {
+    padding: 8px;
+    border: 1px solid black;
+}
