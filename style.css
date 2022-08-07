@@ -23,3 +23,8 @@ table, th, td {
     padding: 8px;
     border: 1px solid black;
 }
+
+.colunas form {
+    display: flex;
+    flex-direction: column;
+}

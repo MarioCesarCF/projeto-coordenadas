@@ -56,7 +56,13 @@ table.appendChild(thead);
 table.appendChild(tbody);
 
 function pesquisarPorCnpj() {  
-    tbody.innerHTML = '';
+    table.innerHTML = `<thead><tr>
+    <th>Nome da Empresa</th>
+    <th>CNPJ da Empresa</th>
+    <th>Cidade</th>
+    <th>Informações gerais</th>
+    <th>Coordenadas</th>
+    </tr></thead>`;
     let cnpjEmpresa = empresas.filter((empresa) => {                
         return empresa.cnpj === Number(cpnjInput.value);
     })
@@ -76,7 +82,13 @@ function pesquisarPorCnpj() {
 }
 
 function pesquisarPorCidade() {   
-    tbody.innerHTML = '';
+    table.innerHTML = `<thead><tr>
+    <th>Nome da Empresa</th>
+    <th>CNPJ da Empresa</th>
+    <th>Cidade</th>
+    <th>Informações gerais</th>
+    <th>Coordenadas</th>
+    </tr></thead>`;
     let cidadeEmpresa = empresas.filter((empresa) => {                
         return empresa.cidade === cidadeInput.value;
     })

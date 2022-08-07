@@ -12,10 +12,32 @@
     <br>
     <section id="container">
         <div class="colunas">
-            <h2>Cadastrar</h2>
+            <h2>Cadastrar</h2>            
+            <form action="">
+                <input type="text" id="name-cadastrar" placeholder="Name">
+                <input type="text" id="cnpj-cadastrar" placeholder="CNPJ">
+                <input type="text" id="cidade-cadastrar" placeholder="Cidade">
+                <textarea name="" id="informacoes-cadastrar" placeholder="Informações adicionais" cols="30" rows="10"></textarea>
+                <input type="number" id="coordenadas-cadastrar" placeholder="Coordenadas">
+                <button onclick="pesquisarPorNome()">Cadastrar</button>
+            </form>
         </div>
         <div class="colunas">
             <h2>Alterar</h2>
+            <input type="number" placeholder="cpnj" id="cnpjInput">
+            <button onclick="pesquisarPorCnpj()">Pesquisar</button>
+            <div>
+                <p id="empresa-selecionada-alterar"></p>
+            </div>
+            <form action="" id="form-alterar" hidden="true">
+                <input type="text" id="name-alterar" placeholder="Name">
+                <input type="text" id="cnpj-alterar" placeholder="CNPJ">
+                <input type="text" id="cidade-alterar" placeholder="Cidade">
+                <textarea name="" id="informacoes-alterar" placeholder="Informações adicionais" cols="30" rows="10"></textarea>
+                <input type="number" id="coordenadas-alterar" placeholder="Coordenadas">
+                <button onclick="pesquisarPorNome()">Alterar</button>
+            </form>
+            
         </div>
         <div class="colunas">
             <h2>Buscar</h2>
@@ -23,7 +45,10 @@
             <button onclick="pesquisarPorCnpj()">Pesquisar</button> 
             <br>
             <input type="text" placeholder="cidade" id="cidadeInbut">
-            <button onclick="pesquisarPorCidade()">Pesquisar</button>            
+            <button onclick="pesquisarPorCidade()">Pesquisar</button> 
+            <br>
+            <input type="text" placeholder="nome" id="nomeInbut">
+            <button onclick="pesquisarPorNome()">Pesquisar</button>            
         </div>
     </section>  
     <table id="table">
