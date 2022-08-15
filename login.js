@@ -6,6 +6,10 @@ const users = [
   {
     email: 'arturcf90@gmail.com',
     senha: '259600'
+  },
+  {
+    email: 'teste@teste.com',
+    senha: '123'
   }
 ];
 
