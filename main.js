@@ -46,8 +46,8 @@ const empresas = [
 //     window.location.replace("http://127.0.0.1:5500/infos.html") direciona para a url;
 
 
-const cpnjInput = document.getElementById('cnpjInput');
-const cidadeInput = document.getElementById('cidadeInbut');
+let cpnjInput = document.getElementById('cnpjInput');
+let cidadeInput = document.getElementById('cidadeInbut');
 let table = document.getElementById('table');
 let thead = document.createElement('thead');
 let tbody = document.createElement('tbody');
@@ -55,12 +55,19 @@ let tbody = document.createElement('tbody');
 table.appendChild(thead);
 table.appendChild(tbody);
 
-function pesquisarPorCnpj() {         
+function pesquisarPorCnpj() {  
+    table.innerHTML = `<thead><tr>
+    <th>Nome da Empresa</th>
+    <th>CNPJ da Empresa</th>
+    <th>Cidade</th>
+    <th>Informações gerais</th>
+    <th>Coordenadas</th>
+    </tr></thead>`;
     let cnpjEmpresa = empresas.filter((empresa) => {                
         return empresa.cnpj === Number(cpnjInput.value);
     })
 
-    table.innerHTML.replace('', `        
+    table.innerHTML += `        
         <tbody><tr>
             <td>${cnpjEmpresa[0].nome}</td>
             <td>${cnpjEmpresa[0].cnpj}</td>
@@ -68,21 +75,20 @@ function pesquisarPorCnpj() {
             <td>${cnpjEmpresa[0].informacoesGerais}</td>
             <td>${cnpjEmpresa[0].coordenadas}</td>
         </tr></tbody>
-    ` )
+    ` 
+    cpnjInput.value = '';
+    
+           
 }
 
 function pesquisarPorCidade() {   
-    if(!tbody) {
-        tbody.innerHTML += `        
-        <tbody><tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr></tbody>
-        `  
-    } 
+    table.innerHTML = `<thead><tr>
+    <th>Nome da Empresa</th>
+    <th>CNPJ da Empresa</th>
+    <th>Cidade</th>
+    <th>Informações gerais</th>
+    <th>Coordenadas</th>
+    </tr></thead>`;
     let cidadeEmpresa = empresas.filter((empresa) => {                
         return empresa.cidade === cidadeInput.value;
     })
@@ -98,4 +104,6 @@ function pesquisarPorCidade() {
         </tr></tbody>
         ` 
     }    
+
+    cidadeInput.value = '';
 }
