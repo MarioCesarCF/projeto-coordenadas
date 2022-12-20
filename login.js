@@ -32,5 +32,5 @@ btnLogin.addEventListener( 'click', (e) => {
     return;
   }
 
-  location.href = 'http://127.0.0.1:5500/infos.html'; //essa url deverá ser alterada depois que o projeto for para produção.
+  location.href = 'https://mariocesarcf.github.io/projeto-coordenadas/infos.html'; //essa url deverá ser alterada depois que o projeto for para produção.
 })
