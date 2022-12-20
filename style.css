@@ -28,3 +28,12 @@ table, th, td {
     display: flex;
     flex-direction: column;
 }
+
+#mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+}

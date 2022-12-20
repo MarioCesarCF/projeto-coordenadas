@@ -11,7 +11,7 @@
     <h1>Projeto Coordenadas</h1>
     <br>
     <section id="container">
-        <div class="colunas">
+        <!-- <div class="colunas">
             <h2>Cadastrar</h2>            
             <form action="">
                 <input type="text" id="name-cadastrar" placeholder="Name">
@@ -38,16 +38,16 @@
                 <button onclick="pesquisarPorNome()">Alterar</button>
             </form>
             
-        </div>
+        </div> -->
         <div class="colunas">
             <h2>Buscar</h2>
             <input type="number" placeholder="cpnj" id="cnpjInput">
             <button id="btnBuscarCnpj">Pesquisar</button> 
             <br>
-            <input type="text" placeholder="cidade" id="cidadeInbut">
+            <input type="text" placeholder="cidade" id="cidadeInput">
             <button id="btnBuscarCidade">Pesquisar</button> 
             <br>
-            <input type="text" placeholder="nome" id="nomeInbut">
+            <input type="text" placeholder="nome" id="nomeInput">
             <button id="btnBuscarNome">Pesquisar</button>            
         </div>
     </section>  
@@ -60,7 +60,11 @@
             <th>Coordenadas</th>
             </tr></thead>
     </table>
+    <div id="mapa"></div>
     <a href="./index.html">Voltar</a>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnAjq1AWPM5IRs6mrnw1QKJsOSy9IOSUo"> 
+    // & callback=inicializar
+    </script>
     <script src="./main.js"></script>
 </body>
 </html>
